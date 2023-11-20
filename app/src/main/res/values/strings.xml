@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Suite Gabriel</string>
+    <string name="close_nav">Close</string>
+    <string name="open_nav">Open</string>
+    <string name="home">Home</string>
+    <string name="giroscopio">Giroscopio</string>
+    <string name="cr_ditos">Créditos</string>
+    <string name="sensor_humedad">Sensor Humedad</string>
+    <string name="info">Info</string>
+    <string name="sensor_presi_n">Sensor Presión</string>
+    <string name="salir">Salir</string>
+    <string name="icono_de_cada_uno">Icono de cada uno</string>
+    <string name="sensores_de_gabriel">Sensores de Gabriel</string>
+    <string name="luminosidad">Luminosidad</string>
+    <string name="proximidad">Proximidad</string>
+    <string name="temperatura">Temperatura</string>
+    <string name="suite_jvg">Suite JVG</string>
+</resources>

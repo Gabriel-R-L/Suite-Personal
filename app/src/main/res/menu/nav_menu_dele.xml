@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "navigation_view">
+
+    <item
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/home"
+                android:title="@string/home"/>
+        </menu>
+    </item>
+
+    <group
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_linterna"
+            android:icon="@drawable/temperature"
+            android:title="Linterna"/>
+
+        <item
+            android:id="@+id/nav_musica"
+            android:icon="@drawable/light_level"
+            android:title="Musica"/>
+
+        <item
+            android:id="@+id/nav_nivel"
+            android:icon="@drawable/distance"
+            android:title="Nivel"/>
+
+    </group>
+
+
+    <item
+        android:title="">
+        <menu>
+
+            <item
+                android:id="@+id/nav_creditos"
+                android:icon="@drawable/credits"
+                android:title="@string/cr_ditos"/>
+
+            <item
+                android:id="@+id/nav_info"
+                android:icon="@drawable/info"
+                android:title="@string/info"/>
+
+            <item
+                android:id="@+id/nav_salir"
+                android:icon="@drawable/exit"
+                android:title="@string/salir"/>
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" paret="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="botones">
+        <item name="android:layout_width">@dimen/largo</item>
+        <item name="android:layout_height">@dimen/largo</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <!-- Espacio entre iconos -->
+    <style name="espacio">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">1dp</item>
+    </style>
+</resources>
