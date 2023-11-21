@@ -80,6 +80,7 @@ public class Musica extends Fragment {
     public void onStop() {
         super.onStop();
         onDestroy();
+        //! mediaplayer.release();
     }
 
     public void onStartCommand() {
@@ -99,6 +100,7 @@ public class Musica extends Fragment {
     public void onDestroy() {
         super.onDestroy();
         //* parar la musica
+        //! if (miReproductor != null || miReproductor.isPlaying()) 
         if(miReproductor.isPlaying()) {
             miReproductor.stop();
             miReproductor.release();
