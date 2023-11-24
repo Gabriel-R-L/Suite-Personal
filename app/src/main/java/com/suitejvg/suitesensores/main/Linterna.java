@@ -3,6 +3,7 @@ package com.suitejvg.suitesensores.main;
 import android.app.Activity;
 import android.content.Context;
 import android.hardware.SensorManager;
+import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -86,18 +87,23 @@ public class Linterna extends Fragment {
     //* parar la linterna
     public void onStop() {
         super.onStop();
-        enciendeApaga(encendida);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            try {
+                micamara.setTorchMode(idCamara, false);
+            } catch (CameraAccessException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     public void enciendeApaga(boolean estadoflash) {
         try {
             if (estadoflash) {
-                Toast.makeText(getActivity(), "Flash apagado", Toast.LENGTH_LONG).show();
                 if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     micamara.setTorchMode(idCamara, false);
                 }
             } else {
-//                Toast.makeText(this, "a", Toast.LENGTH_LONG).show();
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     micamara.setTorchMode(idCamara, true);
                 }

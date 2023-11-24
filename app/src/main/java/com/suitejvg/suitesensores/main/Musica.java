@@ -79,8 +79,8 @@ public class Musica extends Fragment {
     @Override
     public void onStop() {
         super.onStop();
-        onDestroy();
-        //! mediaplayer.release();
+//        onDestroy();
+        miReproductor.release();
     }
 
     public void onStartCommand() {
@@ -91,20 +91,9 @@ public class Musica extends Fragment {
         miReproductor.setLooping(true);
 
         //* volumen izq y der
-        miReproductor.setVolume(50,50);
+        miReproductor.setVolume(50, 50);
 
         //* inicializamos el reproductor
         miReproductor.start();
-    }
-
-    public void onDestroy() {
-        super.onDestroy();
-        //* parar la musica
-        //! if (miReproductor != null || miReproductor.isPlaying()) 
-        if(miReproductor.isPlaying()) {
-            miReproductor.stop();
-            miReproductor.release();
-            miReproductor = null;
-        }
     }
 }

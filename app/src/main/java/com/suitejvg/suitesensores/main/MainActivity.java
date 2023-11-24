@@ -108,6 +108,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //              * cargar el header
             navigationView.inflateHeaderView(R.layout.nav_header_dele);
 
+//                !cargar la ventana Home Fragment. Pasará a ser la calculadora
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragmen()).commit();
+
         } else if (item.getItemId()==R.id.nav_linterna) {
             Toast.makeText(this, "Linterna", Toast.LENGTH_SHORT).show();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Linterna()).commit();
@@ -116,10 +119,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Musica()).commit();
         } else if (item.getItemId()==R.id.nav_nivel) {
             Toast.makeText(this, "Nivel", Toast.LENGTH_SHORT).show();
-            //! terminar
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Nivel()).commit();
         } else if (item.getItemId()==R.id.nav_creditos) {
-            Toast.makeText(this, "Créditos*", Toast.LENGTH_SHORT).show();
-
+            Toast.makeText(this, "Créditos", Toast.LENGTH_SHORT).show();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Creditos()).commit();
         } else if (item.getItemId()==R.id.nav_info) {
             Toast.makeText(this, "Info*", Toast.LENGTH_SHORT).show();
 

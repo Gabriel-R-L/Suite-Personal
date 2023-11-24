@@ -15,4 +15,6 @@
     <string name="proximidad">Proximidad</string>
     <string name="temperatura">Temperatura</string>
     <string name="suite_jvg">Suite JVG</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
