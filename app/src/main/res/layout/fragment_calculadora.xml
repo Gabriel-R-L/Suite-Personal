@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".utils.Calculadora">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textAlignment="textEnd"
+            android:paddingEnd="@dimen/calcButtonTextSize"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="@string/calculator_workings"
+            android:layout_gravity="end"
+            android:gravity="center_vertical"
+            android:textSize="25sp"
+            android:id="@+id/operacionTV"
+            tools:ignore="NestedWeights,RtlSymmetry"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textAlignment="textEnd"
+            android:paddingEnd="@dimen/calcButtonTextSize"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="@string/calculator_results"
+            android:layout_gravity="end"
+            android:gravity="center_vertical"
+            android:textSize="40sp"
+            android:id="@+id/resultadoTV"
+            tools:ignore="RtlSymmetry"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="7"
+        android:id="@+id/buttonContainer">
+
+    </LinearLayout>
+
+</LinearLayout>

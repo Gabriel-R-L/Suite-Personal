@@ -1,4 +1,4 @@
-package com.suitejvg.suitesensores.main;
+package com.suitejvg.suitesensores.sensores;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -97,6 +97,5 @@ public class NivelPantalla extends AppCompatImageView {
         posX += 7;
         posY -= 3;
         lienzo.drawBitmap(burbuja, posX, posY, null);
-
     }
 }

@@ -19,17 +19,17 @@
 
         <item
             android:id="@+id/nav_linterna"
-            android:icon="@drawable/temperature"
+            android:icon="@drawable/light_level"
             android:title="Linterna"/>
 
         <item
             android:id="@+id/nav_musica"
-            android:icon="@drawable/light_level"
+            android:icon="@drawable/musica"
             android:title="Musica"/>
 
         <item
             android:id="@+id/nav_nivel"
-            android:icon="@drawable/distance"
+            android:icon="@drawable/nivel"
             android:title="Nivel"/>
 
     </group>
@@ -41,7 +41,7 @@
 
             <item
                 android:id="@+id/nav_creditos"
-                android:icon="@drawable/credits"
+                android:icon="@drawable/dev_credits"
                 android:title="@string/cr_ditos"/>
 
             <item

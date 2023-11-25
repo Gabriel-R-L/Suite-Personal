@@ -7,9 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,6 +15,11 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 import com.suitejvg.suitesensores.R;
+import com.suitejvg.suitesensores.sensores.Linterna;
+import com.suitejvg.suitesensores.sensores.Musica;
+import com.suitejvg.suitesensores.sensores.Nivel;
+import com.suitejvg.suitesensores.utils.Calculadora;
+import com.suitejvg.suitesensores.utils.Creditos;
 import com.suitejvg.suitesensores.utils.HomeFragmen;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -55,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 //        * abrir el fragmento home al iniciar la app
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragmen()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Calculadora()).commit();
             navigationView.setCheckedItem(R.id.nav_home);
         }
     }
@@ -69,23 +72,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        if (item.getItemId() == R.id.dele_git) {
-            // Mostrar el Toast
-            Toast.makeText(this, "Viajando a mi GitHub", Toast.LENGTH_SHORT).show();
-//          Crear un Intent con la acción de ver
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Gabriel-R-L"));
-
-            // Verificar si hay una aplicación que puede manejar el Intent
-            if (intent.resolveActivity(getPackageManager()) != null) {
-                // Iniciar la actividad
-                startActivity(intent);
-            }
-        }
-
         if (item.getItemId() == R.id.dele_calc) {
-            Toast.makeText(this, "Mostrando calculadora", Toast.LENGTH_SHORT).show();
-            //! terminar....
+            Toast.makeText(this, "Calculadora", Toast.LENGTH_SHORT).show();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Calculadora()).commit();
         }
 
         return super.onOptionsItemSelected(item);
@@ -109,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             navigationView.inflateHeaderView(R.layout.nav_header_dele);
 
 //                !cargar la ventana Home Fragment. Pasará a ser la calculadora
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragmen()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Calculadora()).commit();
 
         } else if (item.getItemId()==R.id.nav_linterna) {
             Toast.makeText(this, "Linterna", Toast.LENGTH_SHORT).show();

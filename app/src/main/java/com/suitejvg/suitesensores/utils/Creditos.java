@@ -1,4 +1,4 @@
-package com.suitejvg.suitesensores.main;
+package com.suitejvg.suitesensores.utils;
 
 import android.content.Intent;
 import android.media.Image;

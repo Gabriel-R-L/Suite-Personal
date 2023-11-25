@@ -15,4 +15,7 @@
 
     <color name="blue_1">#00101f</color>
     <color name="blue_5">#0078ff</color>
+
+    <color name="orange">#E66A15</color>
+    <color name="red">#A50F0F</color>
 </resources>

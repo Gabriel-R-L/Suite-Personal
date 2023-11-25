@@ -1,4 +1,4 @@
-package com.suitejvg.suitesensores.main;
+package com.suitejvg.suitesensores.sensores;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -70,7 +70,7 @@ public class Musica extends Fragment {
         //* volverá el botón a su imagen original
         botonMusica.setImageResource(R.mipmap.musica);
         //* que finalice el servicio
-        onDestroy();
+        onStop();
 
         encendida = !encendida;
     }

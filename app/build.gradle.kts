@@ -29,7 +29,7 @@ android {
 }
 
 dependencies {
-
+    implementation ("net.objecthunter:exp4j:0.4.8")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")

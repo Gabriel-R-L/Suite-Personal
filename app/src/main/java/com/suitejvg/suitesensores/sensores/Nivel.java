@@ -1,4 +1,4 @@
-package com.suitejvg.suitesensores.main;
+package com.suitejvg.suitesensores.sensores;
 
 import android.content.Context;
 import android.hardware.Sensor;
