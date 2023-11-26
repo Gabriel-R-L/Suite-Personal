@@ -38,4 +38,29 @@
     <string name="equals">=</string>
     <string name="calculator_results">0</string>
     <string name="calculator_workings">""</string>
+    <string name="calcular">Calcular</string>
+    <string name="calculadora">Calculadora</string>
+    <string name="todo">TODO</string>
+    <string name="n_mero_1">Número 1</string>
+    <string name="n_mero_2">Número 2</string>
+    <string name="gabriel_ramos_l_pez">Gabriel Ramos López</string>
+    <string name="curso_2_dam">Curso: 2º DAM</string>
+    <string name="fecha">Fecha:</string>
+    <string name="milogo">TODO</string>
+    <string name="atr_s">Atrás</string>
+    <string name="autor">AUTOR</string>
+    <string name="versi_n">Versión:</string>
+    <string name="resultados">RESULTADOS</string>
+    <string name="suma">Suma</string>
+    <string name="resta">Resta</string>
+    <string name="multiplicaci_n">Multiplicación</string>
+    <string name="divisi_n">División</string>
+    <string name="email">gabrielramos@centroculturalsalmantino.com</string>
+    <string name="versi_n_1_0_4">Versión: 1.0.4</string>
+    <string name="sumar">Sumar</string>
+    <string name="restar">Restar</string>
+    <string name="multiplicar">Multiplicar</string>
+    <string name="dividir">Dividir</string>
+    <string name="numero_1">Número 1</string>
+    <string name="numero_2">Número 2</string>
 </resources>

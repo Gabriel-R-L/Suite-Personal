@@ -7,66 +7,67 @@
     android:layout_height="match_parent"
     tools:context=".utils.Creditos">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="190dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="58dp"
-        android:src="@mipmap/cooking_time"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="51dp"
         android:fontFamily="monospace"
-        android:text="Gabriel"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        android:text="Ese soy yo, el creador"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/github"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="72dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="32dp"
         android:fontFamily="monospace"
-        android:text="Ese soy yo, el creador"
+        android:text="2023"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/github"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/github" />
 
     <ImageView
         android:id="@+id/github"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginEnd="42dp"
-        android:layout_marginBottom="94dp"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="105dp"
         android:src="@drawable/dele_git_black"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toStartOf="@+id/linkedin"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
 
     <ImageView
         android:id="@+id/linkedin"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="129dp"
+        android:layout_marginEnd="85dp"
         android:src="@drawable/dele_linkedin"
         app:layout_constraintBottom_toBottomOf="@+id/github"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/github"
-        app:layout_constraintTop_toTopOf="@+id/github"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/github" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="171dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="39dp"
+        android:src="@drawable/gabriel_logo"
+        app:layout_constraintBottom_toTopOf="@+id/titulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

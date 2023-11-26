@@ -1,18 +1,14 @@
 package com.suitejvg.suitesensores.sensores;
 
-import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.IBinder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.suitejvg.suitesensores.R;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class Musica extends Fragment {
@@ -22,6 +18,9 @@ public class Musica extends Fragment {
     //* variables para trabajar con los servicios musica
     private boolean encendida;
     private ImageView botonMusica;
+
+    //* Guardará la canción que se ha usado anteriormente para que no se repita
+    private int index_guardado = 0;
     public Musica() { }
 
     @Override
@@ -58,17 +57,44 @@ public class Musica extends Fragment {
     }
 
     public void enciendeMusica() {
-        //* volverá amarillo el botón
-        botonMusica.setImageResource(R.mipmap.musica2);
         //* que comience el servicio
-        onStartCommand();
+        elegirMusica();
 
         encendida = !encendida;
     }
 
+
+
+    private void elegirMusica()  {
+        int[] songResources = {R.raw.bach_suite, R.raw.bumblebee, R.raw.fallout, R.raw.guetta, R.raw.nightcall};
+        int[] songImages = {R.drawable.bach_suite, R.drawable.bumblebee, R.drawable.fallout, R.drawable.guetta, R.drawable.nightcall};
+
+        int index = -1;
+
+        do {
+           index = (int) (Math.random() * songResources.length);
+        } while(index == index_guardado);
+
+        index_guardado = index;
+
+        botonMusica.setImageResource(songImages[index]);
+
+      //* inicializamos el objeto con el nombre de la cancion descargada y guardada en el directorio raw
+        miReproductor = MediaPlayer.create(getActivity(), songResources[index]);
+
+        //* para que se reproduzca constantemente
+        miReproductor.setLooping(true);
+
+        //* volumen izq y der
+        miReproductor.setVolume(50, 50);
+
+        //* inicializamos el reproductor
+        miReproductor.start();
+    }
+
     public void apagaMusica() {
         //* volverá el botón a su imagen original
-        botonMusica.setImageResource(R.mipmap.musica);
+        botonMusica.setImageResource(R.drawable.cd0);
         //* que finalice el servicio
         onStop();
 
@@ -81,19 +107,5 @@ public class Musica extends Fragment {
         super.onStop();
 //        onDestroy();
         miReproductor.release();
-    }
-
-    public void onStartCommand() {
-        //* inicializamos el objeto con el nombre de la cancion descargada y guardada en el directorio raw
-        miReproductor = MediaPlayer.create(getActivity(), R.raw.bach_suite);
-
-        //* para que se reproduzca constantemente
-        miReproductor.setLooping(true);
-
-        //* volumen izq y der
-        miReproductor.setVolume(50, 50);
-
-        //* inicializamos el reproductor
-        miReproductor.start();
     }
 }

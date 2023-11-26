@@ -1,5 +1,6 @@
 package com.suitejvg.suitesensores.utils;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Bundle;
 
@@ -29,7 +30,7 @@ public class Calculadora extends Fragment {
     TextView operacionTV;
     TextView resultadoTV;
     private String datosText = "";
-    private int longitudText = datosText.length();
+
     public Calculadora() { }
 
     @Override
@@ -90,7 +91,7 @@ public class Calculadora extends Fragment {
                 //* Personalizar botones
                 if (value.equals("=")) {
                     button.setBackgroundColor(ContextCompat.getColor(getActivity(), R.color.orange));
-                    button.setTextSize(50);
+                    button.setTextSize(getResources().getDimension(R.dimen.calcButtonTextSize));
                     button.setLayoutParams(new LinearLayout.LayoutParams(
                             0,
                             LinearLayout.LayoutParams.MATCH_PARENT,
@@ -132,6 +133,7 @@ public class Calculadora extends Fragment {
         }
     }
 
+    @SuppressLint("DefaultLocale")
     private void listenerOperaciones(Button btn) {
         //* Obtener el texto del botón clicado
         String buttonText = btn.getText().toString();
@@ -159,22 +161,21 @@ public class Calculadora extends Fragment {
                 if (datosText.length() > 0) {
                     datosText = datosText.substring(0, datosText.length() - 1);
                     operacionTV.setText(datosText);
-                } else {
-                    operacionTV.setText("0");
                 }
                 break;
             case "CE":
                 if (datosText.length() > 0) {
                     datosText = "";
-                    operacionTV.setText("0");
+                    operacionTV.setText("");
+                    resultadoTV.setText("0");
                 }
                 break;
 
-            case "(":
-            case ")":
-                datosText += buttonText;
-                operacionTV.setText(datosText);
-                break;
+//            case "(":
+//            case ")":
+//                datosText += buttonText;
+//                operacionTV.setText(datosText);
+//                break;
 
             default:
                 datosText += buttonText;

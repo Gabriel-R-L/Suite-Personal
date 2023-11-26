@@ -11,6 +11,6 @@
         android:id="@+id/musica"
         android:layout_width="@dimen/maximo"
         android:layout_height="@dimen/maximo"
-        android:src="@mipmap/musica" />
+        android:src="@drawable/cd0" />
 
 </RelativeLayout>

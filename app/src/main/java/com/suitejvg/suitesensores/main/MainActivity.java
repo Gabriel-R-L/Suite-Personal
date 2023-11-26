@@ -19,6 +19,7 @@ import com.suitejvg.suitesensores.sensores.Linterna;
 import com.suitejvg.suitesensores.sensores.Musica;
 import com.suitejvg.suitesensores.sensores.Nivel;
 import com.suitejvg.suitesensores.utils.Calculadora;
+import com.suitejvg.suitesensores.utils.CalculadoraOG;
 import com.suitejvg.suitesensores.utils.Creditos;
 import com.suitejvg.suitesensores.utils.HomeFragmen;
 
@@ -73,8 +74,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.dele_calc) {
-            Toast.makeText(this, "Calculadora", Toast.LENGTH_SHORT).show();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Calculadora()).commit();
+            Toast.makeText(this, "Calculadora OG", Toast.LENGTH_SHORT).show();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CalculadoraOG()).commit();
         }
 
         return super.onOptionsItemSelected(item);

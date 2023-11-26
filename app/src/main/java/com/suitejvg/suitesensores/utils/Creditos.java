@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com.suitejvg.suitesensores.R;
 
 public class Creditos extends Fragment {
+    ImageView titulo;
     ImageView github;
     ImageView linkedin;
     public Creditos() { }

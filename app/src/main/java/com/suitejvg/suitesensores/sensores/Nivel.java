@@ -6,6 +6,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.suitejvg.suitesensores.R;
+
+import java.util.Objects;
 
 public class Nivel extends Fragment implements SensorEventListener {
 
@@ -31,12 +34,14 @@ public class Nivel extends Fragment implements SensorEventListener {
         super.onCreate(savedInstanceState);
 
         //* acceder al servicio de sensores de nuestro dispositivo
-        miManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
+        miManager = (SensorManager) Objects.requireNonNull(requireActivity()).getSystemService(Context.SENSOR_SERVICE);
         //* usa el sensor específico para esta actividad
         miSensor = miManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        //* conseguir el tamaño de la pantalla
-        int lado = getResources().getDimensionPixelSize(R.dimen.maximo);
-
+        //* conseguir el tamaño de la pantalla (en este caso me interesa el ancho)
+        DisplayMetrics medidas = new DisplayMetrics();
+        requireActivity().getWindowManager().getDefaultDisplay().getMetrics(medidas);
+//        int lado = getResources().getDimensionPixelSize(R.dimen.maximo);
+          int lado = medidas.widthPixels;
         //* instanciar la clase nivelPantalla
         pantalla = new NivelPantalla(getActivity(), lado);
     }
@@ -44,7 +49,7 @@ public class Nivel extends Fragment implements SensorEventListener {
     @Override
     @NonNull
     //* dibuja la interfaz
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return pantalla;
     }

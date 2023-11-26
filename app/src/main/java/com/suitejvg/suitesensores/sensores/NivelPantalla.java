@@ -1,18 +1,20 @@
 package com.suitejvg.suitesensores.sensores;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
+import android.util.DisplayMetrics;
 
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 
 import com.suitejvg.suitesensores.R;
 
+@SuppressLint("ViewConstructor")
 public class NivelPantalla extends AppCompatImageView {
     int lado, radio, radioPeq, trazo;
 
@@ -47,6 +49,7 @@ public class NivelPantalla extends AppCompatImageView {
         trazoDibujo.setColor(Color.BLACK);
         trazoDibujo.setTextSize(20);
         BitmapDrawable bola = (BitmapDrawable) ContextCompat.getDrawable(context, R.mipmap.burbuja);
+        assert bola != null;
         burbuja = bola.getBitmap();
         burbuja = Bitmap.createScaledBitmap(burbuja, radioPeq*2, radioPeq*2, true);
     }
@@ -85,7 +88,25 @@ public class NivelPantalla extends AppCompatImageView {
     //* ajustar dimensiones de la vista
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+//        DisplayMetrics medidas = new DisplayMetrics();
+//        getWindowManager().getDefaultDisplay().getMetrics(medidas);
+//
+//        int ancho = medidas.widthPixels;
+//        int alto = medidas.heightPixels;
+//        setMeasuredDimension(lado, lado);
+
+        // Obtener las dimensiones del contenedor
+        int contenedorAncho = MeasureSpec.getSize(widthMeasureSpec);
+        int contenedorAlto = MeasureSpec.getSize(heightMeasureSpec);
+
+        // Centrar la vista en el contenedor
+        int left = (contenedorAncho - lado) / 2;
+        int top = (contenedorAlto - lado) / 2;
+
+        // Establecer las dimensiones de la vista
         setMeasuredDimension(lado, lado);
+        setX(left);
+        setY(top);
     }
 
     protected void onDraw(Canvas lienzo) {

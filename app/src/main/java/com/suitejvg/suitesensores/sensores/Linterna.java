@@ -1,8 +1,6 @@
 package com.suitejvg.suitesensores.sensores;
 
-import android.app.Activity;
 import android.content.Context;
-import android.hardware.SensorManager;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraManager;
 import android.os.Build;
@@ -11,16 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.suitejvg.suitesensores.R;
 
+import java.util.Objects;
+
 public class Linterna extends Fragment {
     private ImageView botonCamara;
-    private SensorManager miManager;
 
     //* por defecto es false
     private boolean encendida;
@@ -34,7 +31,7 @@ public class Linterna extends Fragment {
         super.onCreate(savedInstanceState);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            micamara = (CameraManager) getActivity().getSystemService(Context.CAMERA_SERVICE);
+            micamara = (CameraManager) Objects.requireNonNull(requireActivity()).getSystemService(Context.CAMERA_SERVICE);
         }
 
         try {
@@ -71,16 +68,22 @@ public class Linterna extends Fragment {
     }
 
     public void botonEnciendeFlash() {
-        if (Math.random() > 0.95) {
-            botonCamara.setImageResource(R.mipmap.oficina3);
-        } else {
-            botonCamara.setImageResource(R.mipmap.oficina2);
-        }
+        randomLanternImage();
         enciendeApaga(encendida);
     }
 
+    private void randomLanternImage() {
+        int[] imageResources = {R.mipmap.office1, R.mipmap.office2, R.mipmap.office3, R.mipmap.office4, R.mipmap.office5, R.mipmap.office6, R.mipmap.office7, R.mipmap.office8, R.mipmap.office9, R.mipmap.office10, R.mipmap.office11};
+        if (Math.random() >= 0.8) {
+            int index = (int) (Math.random() * imageResources.length);
+            botonCamara.setImageResource(imageResources[index]);
+        } else {
+            botonCamara.setImageResource(R.mipmap.office1);
+        }
+    }
+
     public void botonApagaFlash() {
-        botonCamara.setImageResource(R.mipmap.oficina);
+        botonCamara.setImageResource(R.mipmap.office0);
         enciendeApaga(encendida);
     }
 
