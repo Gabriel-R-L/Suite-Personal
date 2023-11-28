@@ -19,9 +19,8 @@ import com.suitejvg.suitesensores.sensores.Linterna;
 import com.suitejvg.suitesensores.sensores.Musica;
 import com.suitejvg.suitesensores.sensores.Nivel;
 import com.suitejvg.suitesensores.utils.Calculadora;
-import com.suitejvg.suitesensores.utils.CalculadoraOG;
 import com.suitejvg.suitesensores.utils.Creditos;
-import com.suitejvg.suitesensores.utils.HomeFragmen;
+import com.suitejvg.suitesensores.utils.Info;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -74,8 +73,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.dele_calc) {
-            Toast.makeText(this, "Calculadora OG", Toast.LENGTH_SHORT).show();
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CalculadoraOG()).commit();
+            Toast.makeText(this, "Calculadora", Toast.LENGTH_SHORT).show();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Calculadora()).commit();
         }
 
         return super.onOptionsItemSelected(item);
@@ -98,7 +97,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //              * cargar el header
             navigationView.inflateHeaderView(R.layout.nav_header_dele);
 
-//                !cargar la ventana Home Fragment. Pasará a ser la calculadora
+//            * cargar la calculadora
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Calculadora()).commit();
 
         } else if (item.getItemId()==R.id.nav_linterna) {
@@ -114,8 +113,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(this, "Créditos", Toast.LENGTH_SHORT).show();
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Creditos()).commit();
         } else if (item.getItemId()==R.id.nav_info) {
-            Toast.makeText(this, "Info*", Toast.LENGTH_SHORT).show();
-
+            Toast.makeText(this, "Info", Toast.LENGTH_SHORT).show();
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new Info()).commit();
         } else if (item.getItemId()==R.id.nav_salir) {
             Toast.makeText(this, "Saliendo*", Toast.LENGTH_SHORT).show();
             finishAffinity();

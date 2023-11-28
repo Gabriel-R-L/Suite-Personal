@@ -7,7 +7,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
-import android.util.DisplayMetrics;
 
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
@@ -35,6 +34,7 @@ public class NivelPantalla extends AppCompatImageView {
 
     public NivelPantalla(Context context, int lado) {
         super(context);
+
         this.lado = lado;
         radio = lado/2;
         radioPeq = lado/10;
@@ -44,7 +44,7 @@ public class NivelPantalla extends AppCompatImageView {
         angulos[0] = 0;
         angulos[1] = 0;
 
-        fondo = iniciarFondo(context);
+        fondo = iniciarFondo();
         trazoDibujo = new Paint();
         trazoDibujo.setColor(Color.BLACK);
         trazoDibujo.setTextSize(20);
@@ -54,21 +54,25 @@ public class NivelPantalla extends AppCompatImageView {
         burbuja = Bitmap.createScaledBitmap(burbuja, radioPeq*2, radioPeq*2, true);
     }
 
-    private Bitmap iniciarFondo(Context context) {
+    private Bitmap iniciarFondo() {
         Bitmap.Config conf = Bitmap.Config.ARGB_4444;
         Bitmap fondo = Bitmap.createBitmap(lado, lado, conf);
         Canvas lienzo = new Canvas(fondo);
         Paint lapiz = new Paint();
-        lapiz.setColor(Color.BLUE);
+
+        //* Dibujo del primer círculo (verde)
+        lapiz.setColor(Color.GREEN);
         lienzo.drawCircle(radio, radio, radio, lapiz);
+
+        //* Segundo fondo para dar profundidad (negro)
         lapiz.setColor(Color.BLACK);
         lienzo.drawCircle(radio, radio, radio-trazo, lapiz);
-        lapiz.setColor(Color.WHITE);
+
+        //* Dibujar las líneas verdes
+        lapiz.setColor(Color.GREEN);
         lienzo.drawLine(radio, 0, radio, lado, lapiz);
         lienzo.drawLine(0, radio, lado, radio, lapiz);
-//        !para poner una imagen de fondo
-//        Bitmap fondo = BitmapFactory.decodeResource(context.getResources(), R.mipmap.shooting_target);
-//        fondo = Bitmap.createScaledBitmap(fondo, lado, lado, true);
+
         return fondo;
     }
 
@@ -88,12 +92,6 @@ public class NivelPantalla extends AppCompatImageView {
     //* ajustar dimensiones de la vista
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-//        DisplayMetrics medidas = new DisplayMetrics();
-//        getWindowManager().getDefaultDisplay().getMetrics(medidas);
-//
-//        int ancho = medidas.widthPixels;
-//        int alto = medidas.heightPixels;
-//        setMeasuredDimension(lado, lado);
 
         // Obtener las dimensiones del contenedor
         int contenedorAncho = MeasureSpec.getSize(widthMeasureSpec);
