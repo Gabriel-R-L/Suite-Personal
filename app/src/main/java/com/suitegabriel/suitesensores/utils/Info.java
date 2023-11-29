@@ -1,4 +1,4 @@
-package com.suitejvg.suitesensores.utils;
+package com.suitegabriel.suitesensores.utils;
 
 import android.os.Bundle;
 
@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.suitejvg.suitesensores.R;
+import com.suitegabriel.suitesensores.R;
 
 public class
 Info extends Fragment {

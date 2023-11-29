@@ -1,4 +1,4 @@
-package com.suitejvg.suitesensores;
+package com.suitegabriel.suitesensores;
 
 import org.junit.Test;
 

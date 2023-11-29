@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.suitejvg.suitesensores"
+    namespace = "com.suitegabriel.suitesensores"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.suitejvg.suitesensores"
+        applicationId = "com.suitegabriel.suitesensores"
         minSdk = 22
         targetSdk = 34
         versionCode = 1

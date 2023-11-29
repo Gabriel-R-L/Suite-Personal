@@ -1,4 +1,4 @@
-package com.suitejvg.suitesensores.utils;
+package com.suitegabriel.suitesensores.utils;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-import com.suitejvg.suitesensores.R;
+import com.suitegabriel.suitesensores.R;
 
 public class HomeFragmen extends Fragment {
 

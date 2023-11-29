@@ -1,4 +1,4 @@
-package com.suitejvg.suitesensores.main;
+package com.suitegabriel.suitesensores.main;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -14,13 +14,13 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
-import com.suitejvg.suitesensores.R;
-import com.suitejvg.suitesensores.sensores.Linterna;
-import com.suitejvg.suitesensores.sensores.Musica;
-import com.suitejvg.suitesensores.sensores.Nivel;
-import com.suitejvg.suitesensores.utils.Calculadora;
-import com.suitejvg.suitesensores.utils.Creditos;
-import com.suitejvg.suitesensores.utils.Info;
+import com.suitegabriel.suitesensores.R;
+import com.suitegabriel.suitesensores.sensores.Linterna;
+import com.suitegabriel.suitesensores.sensores.Musica;
+import com.suitegabriel.suitesensores.sensores.Nivel;
+import com.suitegabriel.suitesensores.utils.Calculadora;
+import com.suitegabriel.suitesensores.utils.Creditos;
+import com.suitegabriel.suitesensores.utils.Info;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 

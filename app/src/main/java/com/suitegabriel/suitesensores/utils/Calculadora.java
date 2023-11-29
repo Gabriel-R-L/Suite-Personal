@@ -1,4 +1,4 @@
-package com.suitejvg.suitesensores.utils;
+package com.suitegabriel.suitesensores.utils;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
@@ -15,7 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.suitejvg.suitesensores.R;
+import com.suitegabriel.suitesensores.R;
 
 /*
 ? Librerías para el cálculo de operaciones

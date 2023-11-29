@@ -1,4 +1,4 @@
-package com.suitejvg.suitesensores.sensores;
+package com.suitegabriel.suitesensores.sensores;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.suitejvg.suitesensores.R;
+import com.suitegabriel.suitesensores.R;
 
 import androidx.fragment.app.Fragment;
 

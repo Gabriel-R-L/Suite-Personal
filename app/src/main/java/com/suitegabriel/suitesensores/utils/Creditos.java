@@ -1,22 +1,18 @@
-package com.suitejvg.suitesensores.utils;
+package com.suitegabriel.suitesensores.utils;
 
 import android.content.Intent;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.suitejvg.suitesensores.R;
+import com.suitegabriel.suitesensores.R;
 
 public class Creditos extends Fragment {
     ImageView titulo;

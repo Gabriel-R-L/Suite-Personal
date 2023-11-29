@@ -1,4 +1,4 @@
-package com.suitejvg.suitesensores.sensores;
+package com.suitegabriel.suitesensores.sensores;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.suitejvg.suitesensores.R;
+import com.suitegabriel.suitesensores.R;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package com.suitejvg.suitesensores.sensores;
+package com.suitegabriel.suitesensores.sensores;
 
 import android.content.Context;
 import android.hardware.camera2.CameraAccessException;
@@ -12,7 +12,7 @@ import android.widget.ImageView;
 
 import androidx.fragment.app.Fragment;
 
-import com.suitejvg.suitesensores.R;
+import com.suitegabriel.suitesensores.R;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package com.suitejvg.suitesensores.sensores;
+package com.suitegabriel.suitesensores.sensores;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -8,10 +8,11 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 
+
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 
-import com.suitejvg.suitesensores.R;
+import com.suitegabriel.suitesensores.R;
 
 @SuppressLint("ViewConstructor")
 public class NivelPantalla extends AppCompatImageView {
