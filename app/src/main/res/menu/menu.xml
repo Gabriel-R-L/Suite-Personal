@@ -3,18 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/dele_git"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:icon="@drawable/dele_media"
-        android:orderInCategory="100"
-        android:title="Mi Git"
-        app:showAsAction="always" />
-    <item
         android:id="@+id/dele_calc"
         android:icon="@drawable/bicalculator"
         android:orderInCategory="100"
-        android:title="Mi Git"
+        android:title="Calculadora"
         app:showAsAction="always" />
 
 </menu>

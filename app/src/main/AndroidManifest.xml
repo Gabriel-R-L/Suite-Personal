@@ -13,7 +13,7 @@
         android:theme="@style/Theme.SuiteSensores"
         tools:targetApi="31">
         <activity
-            android:name=".main.Musica"
+            android:name=".sensores.Musica"
             android:exported="false" />
         <activity
             android:name=".main.MainActivity"
