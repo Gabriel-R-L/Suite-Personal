@@ -63,4 +63,15 @@
     <string name="dividir">Dividir</string>
     <string name="numero_1">Número 1</string>
     <string name="numero_2">Número 2</string>
+    <string name="musica">Musica</string>
+    <string name="oficina">Oficina</string>
+    <string name="home_fragment">Home Fragment</string>
+    <string name="ese_soy_yo_el_creador">Ese soy yo, el creador</string>
+    <string name="_2023">2023</string>
+    <string name="git">Git</string>
+    <string name="linked">Linked</string>
+    <string name="creador">Creador</string>
+    <string name="francotirador">Francotirador</string>
+    <string name="elementos_utilizados">Elementos utilizados</string>
+    <string name="info_section">1. Fragmentos\n2. Clase Manager y SensorManager para los sensores\n3. Clase Bitmap para \'sobreescribir\' en un fragmento\n4. Librería objecthunter para la calculadora\n5. Iconos de yesicon.app\n6. Etiqueta menu para el menu hamburguesa y navbar</string>
 </resources>

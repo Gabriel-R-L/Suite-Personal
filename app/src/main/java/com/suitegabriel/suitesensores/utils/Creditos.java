@@ -36,14 +36,11 @@ public class Creditos extends Fragment {
         github.setOnClickListener(v -> {
                 //* Mostrar el Toast
                 Toast.makeText(getActivity(), "Viajando a mi GitHub", Toast.LENGTH_SHORT).show();
-//*          Crear un Intent con la acción de ver
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Gabriel-R-L"));
-
-                //* Verificar si hay una aplicación que puede manejar el Intent
-                if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
-                    //* Iniciar la actividad
-                    startActivity(intent);
-            }
+//*             Crear un Intent con la acción de ver
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://github.com/Gabriel-R-L"));
+                //* Iniciar la actividad
+                startActivity(intent);
         });
 
         linkedin.setOnClickListener(v -> {
@@ -51,12 +48,10 @@ public class Creditos extends Fragment {
             Toast.makeText(getActivity(), "Viajando a mi LinkedIn", Toast.LENGTH_SHORT).show();
             //* Crear un Intent con la acción de ver
             //* Verificar si hay una aplicación que puede manejar el Intent
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/gabriel-ramos-lopez/"));
-
-            if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
-                //* Iniciar la actividad
-                startActivity(intent);
-            }
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://www.linkedin.com/in/gabriel-ramos-lopez/"));
+            //* Iniciar la actividad
+            startActivity(intent);
         });
 
         return view;
